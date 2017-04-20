@@ -17,8 +17,17 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 		<?php get_sidebar( 'tertiary' ); ?>
 		
 		<div id="latest-blog" class="white-bg">
-			<?php add_action( 'pre_get_posts', 'your_function_name' ); ?>
-			blog
+			<h2>Blog</h2>
+			<?php 
+				$front_posts = new WP_Query( array(
+					'posts_per_page' => 1,
+				) );
+			?>
+			<?php while ( $front_posts->have_posts() ) : $front_posts->the_post(); ?>
+				
+				<?php get_template_part( 'content', 'featured' ); ?>
+
+			<?php endwhile; ?>
 		</div>
 		<div id="footer-sidebar" class="white-bg">
 			<!-- patreon -->
@@ -43,11 +52,13 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 			<div class="sidebar-divider"></div>
 		</div>
 		<div id="footer-comments" class="white-bg">
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template();
-			?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() )
+						comments_template();
+				?>
+			<?php endwhile; ?>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

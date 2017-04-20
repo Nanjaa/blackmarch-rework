@@ -1681,7 +1681,7 @@ body {
 }
 
 /* Header */
-h1 {
+h1.site-title {
 	display: none;
 }
 header h2 {
