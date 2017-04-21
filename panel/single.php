@@ -9,12 +9,15 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+		single.php
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php if ( 'jetpack-comic' == get_post_type() ) : ?>
 
 			<div class="entry-comic">
+
+				<?php panel_content_nav( 'nav-below' ); ?>
 
 				<?php get_template_part( 'content', 'comic' ); ?>
 
@@ -23,6 +26,8 @@ get_header(); ?>
 			</div>
 
 		<?php else : ?>
+
+			<?php panel_content_nav( 'nav-below' ); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
