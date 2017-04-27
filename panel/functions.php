@@ -318,12 +318,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-
-
-function my_main_query($query){
-    if( !is_admin() && $query->is_main_query() ){
-        $query->set( 'posts_per_page', 1 );
-    }
-}
-add_action('pre_get_posts','my_main_query');

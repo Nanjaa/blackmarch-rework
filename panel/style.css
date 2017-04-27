@@ -590,13 +590,6 @@ a:active {
 	margin: 0 auto;
 	max-width: 1000px;
 }
-.entry-comic {
-	background: #efefef;
-	border: 1px solid #eee;
-	border-radius: 3px;
-	margin: 0 0 1.6em;
-	padding: 1.6em;
-}
 .entry-comic.loading {
 	opacity: 0.5;
 	-webkit-transition: opacity 0.3s ease;
@@ -1679,8 +1672,15 @@ object {
 body {
 	background: #000;
 }
+#page {
+	width: 100%;
+}
 
 /* Header */
+header, #main, #content {
+	max-width: 970px;
+	padding: 0;
+}
 h1.site-title {
 	display: none;
 }
@@ -1690,18 +1690,43 @@ header h2 {
 /* Navigation Under Header */
 nav {
 	background: #333366;
+	position: relative;
+	text-align: center;
 }
 nav a {
-    width: 16%;
+    width: 25%;
     display: inline-block;
     text-align: center;
-    height: 60px;
+    height: 30px;
+}
+@media screen and (min-width: 768px) {
+	nav a {
+		width: 16%;
+		height: 45px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	nav a {
+		height: 60px;
+	}
 }
 nav a img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
+	height: 15px;
+	width: auto;
+}
+@media screen and (min-width: 768px) {
+	nav a img {
+		height: 20px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	nav a img {
+		height: 33px;
+	}
 }
 
 
@@ -1711,6 +1736,19 @@ footer {
 	background: #666666;
 	padding: 1em;
 }
+footer > div {
+    min-width: 100%;
+}
+footer > div:not(:last-child) {
+    margin-bottom: 1em;
+}
+.footer-large-margin {
+	margin-right: 18px;
+}
+.footer-small-margin {
+	margin-right: 10px;
+}
+
 #latest-blog {
     width: 60%;
     display: inline-block;
@@ -1722,14 +1760,25 @@ footer {
     margin-left: 1em;
     padding: 10px;
 }
+.footer-sidebar-wrap {
+    text-align: center;
+}
+#footer-sidebar a {
+	line-height: 0;
+	display: inline-block;
+}
 
 
 /* footer comments */
 #footer-comments {
-    margin-top: 1em;
     width: 60%;
     display: inline-block;
     padding: 16px;
+}
+@media screen and (min-width: 768px) {
+	#footer-comments {
+		margin-top: 1em;
+	}
 }
 #footer-comments .comments-title {
     margin: 0;
@@ -1784,7 +1833,9 @@ footer {
 .sidebar-divider {
 	width: 153px;
 	height: 6px;
+	margin: 20px 0;
 	background-image: url('images/sidebar-divider.png');
+	display: inline-block;
 }
 #sidebar-connect {
 	background-image: url('images/connect.png');
@@ -1833,6 +1884,10 @@ footer {
 }
 
 /* Comic Nav */
+#content nav, #content nav a {
+	background: none;
+	border: none;
+}
 .nav-btn {
 	height: 61px;
 }

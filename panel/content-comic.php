@@ -5,7 +5,6 @@
 ?>
 <article id="jetpack-comic-<?php the_id(); ?>" <?php post_class(); ?>>
 	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'panel-comic-strip' ); ?></a>
-	<?php the_title( '<h1 class="comic-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
 	<div class="comic-content">
 		<?php the_content(); ?>
 		<?php

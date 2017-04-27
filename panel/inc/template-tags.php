@@ -30,7 +30,7 @@ function panel_content_nav( $nav_id ) {
 		$nav_class .= ' navigation-comic';
 
 	?>
-	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?> clear">
+	<nav role="navigation" class="<?php echo esc_attr( $nav_id ); ?> <?php echo $nav_class; ?> clear">
 		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'panel' ); ?></h1>
 
 	<?php if ( 'jetpack-comic' == get_post_type() && ( is_single() || is_front_page() ) ) : //navigation links for comics ?>
