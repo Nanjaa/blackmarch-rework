@@ -20,13 +20,13 @@ jQuery( document ).ready( function( $ ) {
 				// Scroll up to top of page
 				$(window).scrollTop(0);
 
-				// Update the comments area:
-				if ( $comments.length ) {
-					$comments.replaceWith( $response_comments.clone() );
-					$( '#comments .comment-textarea' ).prepend( $response_comments.find( '.comment-textarea label' ) );
-					highlander_expando_javascript();
-					HighlanderComments.init();
-				}
+				// // Update the comments area:
+				// if ( $comments.length ) {
+				// 	$comments.replaceWith( $response_comments.clone() );
+				// 	$( '#comments .comment-textarea' ).prepend( $response_comments.find( '.comment-textarea label' ) );
+				// 	highlander_expando_javascript();
+				// 	HighlanderComments.init();
+				// }
 			} );
 		}
 
@@ -92,5 +92,42 @@ jQuery( document ).ready( function( $ ) {
 		// If the switch caught something and didn't return, prevent the keypress from running its course.
 		event.preventDefault();
 	} );
+
+	if($('.prev-btn').children().length == 0) {
+		firstGrayscale(true);
+	}
+	else {
+		firstGrayscale(false);
+	}
+
+	if($('.next-btn').children().length == 0) {
+		lastGrayscale(true);
+	}
+	else {
+		lastGrayscale(false);
+	}
+
+	function firstGrayscale(add) {
+		if(add) {
+			$('.prev-btn').addClass('grayscale');
+			$('.first-btn').addClass('grayscale');
+		}
+		else {
+			$('.prev-btn').removeClass('grayscale');
+			$('.first-btn').removeClass('grayscale');
+		}
+	}
+
+	function lastGrayscale(add) {
+		if(add) {
+			$('.next-btn').addClass('grayscale');
+			$('.last-btn').addClass('grayscale');
+		}
+		else {
+			$('.next-btn').removeClass('grayscale');
+			$('last-btn').removeClass('grayscale');
+		}
+	}
+
 
 } );

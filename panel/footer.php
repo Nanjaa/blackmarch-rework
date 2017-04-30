@@ -17,17 +17,21 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 		<?php get_sidebar( 'tertiary' ); ?>
 		
 		<div id="latest-blog" class="white-bg">
-			<h2>Blog</h2>
-			<?php 
-				$front_posts = new WP_Query( array(
-					'posts_per_page' => 1,
-				) );
-			?>
-			<?php while ( $front_posts->have_posts() ) : $front_posts->the_post(); ?>
-				
-				<?php get_template_part( 'content', 'featured' ); ?>
 
-			<?php endwhile; ?>
+			<div id="latest-blog-bar"></div>
+			<div id="latest-blog-wrap">	
+				<h2>Latest News</h2>
+				<?php 
+					$front_posts = new WP_Query( array(
+						'posts_per_page' => 1,
+					) );
+				?>
+				<?php while ( $front_posts->have_posts() ) : $front_posts->the_post(); ?>
+					
+					<?php get_template_part( 'content', 'featured' ); ?>
+
+				<?php endwhile; ?>
+			</div>
 		</div>
 		<div id="footer-sidebar" class="white-bg">
 			<div class="footer-sidebar-wrap">
@@ -60,6 +64,35 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 			</div>
 		</div>
 		<div id="footer-comments" class="white-bg">
+
+		<?php if (is_front_page()) : ?>
+			<?php
+				//Get the latest comic
+				$comic_args = array(
+					'posts_per_page' => 1,
+					'post_type'      => 'jetpack-comic',
+				);
+				$comic = new WP_Query( $comic_args );
+			?>
+
+			<?php if ( $comic->have_posts() ) : ?>
+					<?php while ( $comic->have_posts() ) : $comic->the_post(); ?>
+							<?php
+								// If comments are open or we have at least one comment, load up the comment template
+								print(comments_open());
+								print(get_comments_number());
+								if ( comments_open() || '0' != get_comments_number() )
+									comments_template();
+									print('this is a test');
+							?>
+						<?php endwhile; ?>
+			<?php endif; ?>
+
+			<?php wp_reset_postdata(); ?>
+		<?php endif; ?> 
+
+
+
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

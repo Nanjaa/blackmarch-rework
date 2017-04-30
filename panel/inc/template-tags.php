@@ -42,26 +42,30 @@ function panel_content_nav( $nav_id ) {
 
 		<!-- first button -->
 		<div class="nav-first">
-			<a href="<?php echo esc_url( panel_get_first_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>">
-				<div class="nav-btn long-nav-btn" id="first-btn"></div>
-			</a>
+			<div class="nav-btn long-nav-btn first-btn">
+				<a href="<?php echo esc_url( panel_get_first_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>"></a>
+			</div>
 		</div>
 
 		<!-- previous button -->
 		<div class="nav-previous">
-			<?php previous_post_link( '%link', '<div class="nav-btn short-nav-btn" id="prev-btn"></div>' ); ?>
+			<div class="nav-btn short-nav-btn prev-btn">
+				<?php previous_post_link( '%link', '' ); ?>
+			</div>
 		</div>
 		
 		<!-- next button -->
 		<div class="nav-next">
-			<?php next_post_link( '%link', '<div class="nav-btn short-nav-btn" id="next-btn"></div>' ); ?>
+			<div class="nav-btn short-nav-btn next-btn">
+				<?php next_post_link( '%link', '' ); ?>
+			</div>
 		</div>
 
 		<!-- last button -->
 		<div class="nav-last">
-			<a href="<?php echo esc_url( panel_get_last_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>">
-				<div class="nav-btn long-nav-btn" id="last-btn"></div>
-			</a>
+			<div class="nav-btn long-nav-btn last-btn">
+				<a href="<?php echo esc_url( panel_get_last_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>"></a>
+			</div>
 		</div>
 
 
