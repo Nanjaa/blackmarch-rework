@@ -27,6 +27,8 @@ jQuery( document ).ready( function( $ ) {
 				// 	highlander_expando_javascript();
 				// 	HighlanderComments.init();
 				// }
+
+				handleGrayscale();
 			} );
 		}
 
@@ -93,41 +95,46 @@ jQuery( document ).ready( function( $ ) {
 		event.preventDefault();
 	} );
 
-	if($('.prev-btn').children().length == 0) {
-		firstGrayscale(true);
-	}
-	else {
-		firstGrayscale(false);
-	}
 
-	if($('.next-btn').children().length == 0) {
-		lastGrayscale(true);
-	}
-	else {
-		lastGrayscale(false);
-	}
-
-	function firstGrayscale(add) {
-		if(add) {
-			$('.prev-btn').addClass('grayscale');
-			$('.first-btn').addClass('grayscale');
+	function handleGrayscale() {
+		if($('.prev-btn').children().length == 0) {
+			firstGrayscale(true);
 		}
 		else {
-			$('.prev-btn').removeClass('grayscale');
-			$('.first-btn').removeClass('grayscale');
+			firstGrayscale(false);
+		}
+
+		if($('.next-btn').children().length == 0) {
+			lastGrayscale(true);
+		}
+		else {
+			lastGrayscale(false);
+		}
+
+		function firstGrayscale(add) {
+			if(add) {
+				$('.prev-btn').addClass('grayscale');
+				$('.first-btn').addClass('grayscale');
+			}
+			else {
+				$('.prev-btn').removeClass('grayscale');
+				$('.first-btn').removeClass('grayscale');
+			}
+		}
+
+		function lastGrayscale(add) {
+			if(add) {
+				$('.next-btn').addClass('grayscale');
+				$('.last-btn').addClass('grayscale');
+			}
+			else {
+				$('.next-btn').removeClass('grayscale');
+				$('last-btn').removeClass('grayscale');
+			}
 		}
 	}
 
-	function lastGrayscale(add) {
-		if(add) {
-			$('.next-btn').addClass('grayscale');
-			$('.last-btn').addClass('grayscale');
-		}
-		else {
-			$('.next-btn').removeClass('grayscale');
-			$('last-btn').removeClass('grayscale');
-		}
-	}
+	handleGrayscale();
 
 
 } );
