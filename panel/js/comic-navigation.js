@@ -21,12 +21,12 @@ jQuery( document ).ready( function( $ ) {
 				$(window).scrollTop(0);
 
 				// // Update the comments area:
-				// if ( $comments.length ) {
-				// 	$comments.replaceWith( $response_comments.clone() );
-				// 	$( '#comments .comment-textarea' ).prepend( $response_comments.find( '.comment-textarea label' ) );
-				// 	highlander_expando_javascript();
-				// 	HighlanderComments.init();
-				// }
+				if ( $comments.length ) {
+					$comments.replaceWith( $response_comments.clone() );
+					$( '#comments .comment-textarea' ).prepend( $response_comments.find( '.comment-textarea label' ) );
+					highlander_expando_javascript();
+					HighlanderComments.init();
+				}
 
 				handleGrayscale();
 			} );

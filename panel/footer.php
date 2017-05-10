@@ -79,27 +79,24 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 					<?php while ( $comic->have_posts() ) : $comic->the_post(); ?>
 							<?php
 								// If comments are open or we have at least one comment, load up the comment template
-								print(comments_open());
-								print(get_comments_number());
 								if ( comments_open() || '0' != get_comments_number() )
 									comments_template();
-									print('this is a test');
 							?>
 						<?php endwhile; ?>
 			<?php endif; ?>
 
 			<?php wp_reset_postdata(); ?>
-		<?php endif; ?> 
 
+		<?php else : ?>
 
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template();
-				?>
-			<?php endwhile; ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template
+						if ( comments_open() || '0' != get_comments_number() )
+							comments_template();
+					?>
+				<?php endwhile; ?>
+			<?php endif; ?> 
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

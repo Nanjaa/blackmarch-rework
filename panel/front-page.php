@@ -19,7 +19,6 @@ get_header(); ?>
 			<?php if ( $comic->have_posts() ) : ?>
 
 				<div class="entry-comic">
-				front page
 
 					<?php /* Start the comic Loop */ ?>
 					<?php while ( $comic->have_posts() ) : $comic->the_post(); ?>
