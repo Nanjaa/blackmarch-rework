@@ -24,8 +24,8 @@ jQuery( document ).ready( function( $ ) {
 				if ( $comments.length ) {
 					$comments.replaceWith( $response_comments.clone() );
 					$( '#comments .comment-textarea' ).prepend( $response_comments.find( '.comment-textarea label' ) );
-					highlander_expando_javascript();
-					HighlanderComments.init();
+					// highlander_expando_javascript();
+					// HighlanderComments.init();
 				}
 
 				handleGrayscale();
