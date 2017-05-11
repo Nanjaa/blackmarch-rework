@@ -43,6 +43,7 @@ function panel_content_nav( $nav_id ) {
 		<!-- first button -->
 		<div class="nav-first">
 			<div class="nav-btn long-nav-btn first-btn">
+				<img src="<?php the_field('comicnav_first', 93); ?>"/>
 				<a href="<?php echo esc_url( panel_get_first_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>"></a>
 			</div>
 		</div>
@@ -50,6 +51,7 @@ function panel_content_nav( $nav_id ) {
 		<!-- previous button -->
 		<div class="nav-previous">
 			<div class="nav-btn short-nav-btn prev-btn">
+				<img src="<?php the_field('comicnav_prev', 93); ?>"/>
 				<?php previous_post_link( '%link', '' ); ?>
 			</div>
 		</div>
@@ -57,6 +59,7 @@ function panel_content_nav( $nav_id ) {
 		<!-- next button -->
 		<div class="nav-next">
 			<div class="nav-btn short-nav-btn next-btn">
+				<img src="<?php the_field('comicnav_next', 93); ?>"/>
 				<?php next_post_link( '%link', '' ); ?>
 			</div>
 		</div>
@@ -64,6 +67,7 @@ function panel_content_nav( $nav_id ) {
 		<!-- last button -->
 		<div class="nav-last">
 			<div class="nav-btn long-nav-btn last-btn">
+				<img src="<?php the_field('comicnav_last', 93); ?>"/>
 				<a href="<?php echo esc_url( panel_get_last_post_link( array( 'post_type' => 'jetpack-comic' ) ) ); ?>"></a>
 			</div>
 		</div>

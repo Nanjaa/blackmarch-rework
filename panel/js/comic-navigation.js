@@ -97,14 +97,14 @@ jQuery( document ).ready( function( $ ) {
 
 
 	function handleGrayscale() {
-		if($('.prev-btn').children().length == 0) {
+		if($('.prev-btn').children('a').length == 0) {
 			firstGrayscale(true);
 		}
 		else {
 			firstGrayscale(false);
 		}
 
-		if($('.next-btn').children().length == 0) {
+		if($('.next-btn').children('a').length == 0) {
 			lastGrayscale(true);
 		}
 		else {

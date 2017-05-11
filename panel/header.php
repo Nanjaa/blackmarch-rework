@@ -41,18 +41,19 @@ global $post;
 		
 
 		<nav role="navigation">
+
 			<!-- about -->
-			<a href="/about"><img src="/wp-content/uploads/2017/04/bm-about.png"/></a>
+			<a href="<?php the_field('about_url', 93); ?>"><img src="<?php the_field('nav_about', 93); ?>"/></a>
 			<!-- cast -->
-			<a href="/cast"><img src="/wp-content/uploads/2017/04/bm-cast.png"/></a>
+			<a href="<?php the_field('cast_url', 93); ?>"><img src="<?php the_field('nav_cast', 93); ?>"/></a>
 			<!-- support -->
-			<a href="/support"><img src="/wp-content/uploads/2017/04/bm-support.png"/></a>
+			<a href="<?php the_field('support_url', 93); ?>"><img src="<?php the_field('nav_support', 93) ?>"/></a>
 			<!-- links -->
-			<a href="/links"><img src="/wp-content/uploads/2017/04/bm-links.png"/></a>
+			<a href="<?php the_field('links_url', 93); ?>"><img src="<?php the_field('nav_links', 93); ?>"/></a>
 			<!-- store -->
-			<a href="/store"><img src="/wp-content/uploads/2017/04/bm-store.png"/></a>
+			<a href="<?php the_field('store_url', 93); ?>"><img src="<?php the_field('nav_store', 93); ?>"/></a>
 			<!-- extras -->
-			<a href="/extras"><img src="/wp-content/uploads/2017/04/bm-extras.png"/></a>
+			<a href="<?php the_field('extras_url', 93); ?>"><img src="<?php the_field('nav_extras', 93); ?>"/></a>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="main" class="site-main">

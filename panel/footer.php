@@ -16,6 +16,10 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 	<footer>
 		<?php get_sidebar( 'tertiary' ); ?>
 		
+
+
+
+		<!-- ****** LATEST BLOG ****** -->
 		<div id="latest-blog" class="white-bg">
 
 			<div id="latest-blog-bar"></div>
@@ -33,36 +37,97 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 				<?php endwhile; ?>
 			</div>
 		</div>
+
+
+
+
+
+
+		<!-- ****** SIDEBAR LINKS ****** -->
+
 		<div id="footer-sidebar" class="white-bg">
 			<div class="footer-sidebar-wrap">
 				<div class="footer-sidebar-first">
 					<!-- patreon -->
-					<a href="#" class="footer-large-margin"><div class="sidebar-square" id="sidebar-patreon"></div></a>
+					<a href="<?php the_field('patreon_url', 93); ?>" class="footer-large-margin">
+						<img class="sidebar-square" src="<?php the_field('patreon_unbroken', 93)?>" />
+						<?php if(get_field('patreon_broken', 93)) : ?>
+							<img class="sidebar-square broken" src="<?php the_field('patreon_broken', 93)?>" />
+						<?php endif ?>
+					</a>
+
 					<!-- support -->
-					<a href="#"><div class="sidebar-rectangle" id="sidebar-support"></div></a>
+					<a href="<?php the_field('support_url', 93);?>">
+						<img class="sidebar-rectangle" src="<?php the_field('support_unbroken', 93);?>"/>
+						<?php if(get_field('support_broken', 93)) : ?>
+							<img class="sidebar-rectangle broken" src="<?php the_field('support_broken', 93);?>"/>
+						<?php endif ?>
+					</a>
 				</div>
+
 				<!-- divider -->
 				<div class="sidebar-divider"></div>
 				<div class="footer-sidebar-second">
+
 					<!-- connect -->
-					<a href="#" class="footer-large-margin"><div class="sidebar-rectangle" id="sidebar-connect"></div></a>
+					<a href="<?php the_field('connect_url', 93);?>" class="footer-large-margin">
+						<img class="sidebar-rectangle" src="<?php the_field('connect_unbroken', 93);?>" />
+						<?php if (get_field('connect_broken', 93)) : ?>
+							<img class="sidebar-rectangle broken" src="<?php the_field('connect_broken', 93);?>" />
+						<?php endif ?>
+					</a>
+					
 					<!-- rss -->
-					<a href="#"><div class="sidebar-square" id="sidebar-rss"></div></a>
+					<a href="<?php the_field('rss_url', 93);?>">
+						<img class="sidebar-square" src="<?php the_field('rss_unbroken', 93);?>" />
+						<?php if (get_field('rss_broken', 93)) : ?>
+							<img class="sidebar-square broken" src="<?php the_field('rss_broken', 93);?>" />
+						<?php endif ?>
+					</a>
 				</div>
+
 				<!-- divider -->
 				<div class="sidebar-divider"></div>
 					<div class="sidebar-divider-third">
+					
 					<!-- tumblr -->
-					<a href="#" class="footer-small-margin"><div class="sidebar-square" id="sidebar-tumblr"></div></a>
+					<a href="<?php the_field('tumblr_url', 93);?>" class="footer-small-margin">
+						<img class="sidebar-square" src="<?php the_field('tumblr_unbroken', 93);?>" />
+						<?php if(get_field('tumblr_broken', 93)) : ?>
+							<img class="sidebar-square broken" src="<?php the_field('tumblr_broken', 93);?>" />
+						<?php endif; ?>
+					</a>
+					
 					<!-- twitter -->
-					<a href="#" class="footer-small-margin"><div class="sidebar-square" id="sidebar-twitter"></div></a>
+					<a href="<?php the_field('twitter_url', 93);?>" class="footer-small-margin">
+						<img class="sidebar-square" src="<?php the_field('twitter_unbroken', 93);?>" />
+						<?php if(get_field('twitter_broken', 93)) : ?>
+							<img class="sidebar-square broken" src="<?php the_field('twitter_broken', 93);?>" />
+						<?php endif; ?>
+					</a>
+					
 					<!-- instagram -->
-					<a href="#"><div class="sidebar-square" id="sidebar-instagram"></div></a>
+					<a href="<?php the_field('instagram_url', 93);?>">
+						<img class="sidebar-square" src="<?php the_field('instagram_unbroken', 93);?>" />
+						<?php if(get_field('instagram_broken', 93)) : ?>
+							<img class="sidebar-square broken" src="<?php the_field('instagram_broken', 93);?>" />
+						<?php endif; ?>
+					</a>
+				
 				</div>
 				<!-- divider -->
 				<div class="sidebar-divider"></div>
 			</div>
 		</div>
+
+
+
+
+
+
+
+		<!-- ****** COMMENTS ****** -->
+
 		<div id="footer-comments" class="white-bg">
 
 		<?php if (is_front_page()) : ?>
