@@ -136,5 +136,11 @@ jQuery( document ).ready( function( $ ) {
 
 	handleGrayscale();
 
-
+	$('.nav-btn a').hover(
+		function() {
+			$(this).prev('img').addClass('comicNavHover');
+		},
+		function() {
+			$(this).prev('img').removeClass('comicNavHover');
+		});
 } );

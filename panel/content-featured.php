@@ -15,6 +15,9 @@
 			<span class="comments-link"><?php comments_popup_link( __( '0', 'panel' ), __( '1', 'panel' ), __( '%', 'panel' ) ); ?></span>
 			<?php endif; ?>
 			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<div class="post-date">
+				<?php panel_posted_on(); ?>
+			</div>
 		</header><!-- .entry-header -->
 
 		<?php if ( panel_has_featured_posts() ) : ?>

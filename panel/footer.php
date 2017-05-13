@@ -66,7 +66,7 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 				</div>
 
 				<!-- divider -->
-				<div class="sidebar-divider"></div>
+				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
 				<div class="footer-sidebar-second">
 
 					<!-- connect -->
@@ -87,7 +87,7 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 				</div>
 
 				<!-- divider -->
-				<div class="sidebar-divider"></div>
+				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
 					<div class="sidebar-divider-third">
 					
 					<!-- tumblr -->
@@ -116,7 +116,7 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 				
 				</div>
 				<!-- divider -->
-				<div class="sidebar-divider"></div>
+				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
 			</div>
 		</div>
 
