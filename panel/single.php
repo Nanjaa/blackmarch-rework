@@ -30,9 +30,9 @@ get_header(); ?>
 
 			<div id="content" class="non-comic-page site-content" role="main">
 
-			<?php panel_content_nav( 'nav-below' ); ?>
-
 			<?php get_template_part( 'content', 'single' ); ?>
+
+			<?php panel_content_nav( 'nav-below' ); ?>
 
 		<?php endif; ?>
 

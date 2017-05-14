@@ -78,12 +78,10 @@ function panel_content_nav( $nav_id ) {
 
 
 	<?php elseif ( is_single() ) : // navigation links for single posts ?>
-
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . esc_html_x( '&larr;', 'Previous post link', 'panel' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . esc_html_x( '&rarr;', 'Next post link', 'panel' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="blog-nav prev-blog">%link</div>', '<span class="meta-nav">' . esc_html_x( '&larr;', 'Previous post link', 'panel' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="blog-nav next-blog">%link</div>', '%title <span class="meta-nav">' . esc_html_x( '&rarr;', 'Next post link', 'panel' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
-
 		<?php if ( get_next_posts_link() ) : ?>
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'panel' ) ); ?></div>
 		<?php endif; ?>

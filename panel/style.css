@@ -391,10 +391,10 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: rgba(254,112,80,.7);
-	-webkit-transition: .3s all ease-in-out;
-	-moz-transition: .3s all ease-in-out;
-	transition: .3s all ease-in-out;
+	color: black;
+	-webkit-transition: .2s all ease-in-out;
+	-moz-transition: .2s all ease-in-out;
+	transition: .2s all ease-in-out;
 }
 
 /* Alignment */
@@ -2069,6 +2069,16 @@ p.comment-subscription-form {
 	z-index: 999;
 	width: 100%;
 	height: 100%;
+}
+#content .blog-nav a {
+	position: relative;
+	height: auto;
+}
+.blog-nav.prev-blog {
+	float: left;
+}
+.blog-nav.next-blog {
+	float: right;
 }
 .nav-btn {
 	padding: 0;
