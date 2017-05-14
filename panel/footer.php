@@ -45,79 +45,89 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 
 		<!-- ****** SIDEBAR LINKS ****** -->
 
-		<div id="footer-sidebar" class="white-bg">
-			<div class="footer-sidebar-wrap">
-				<div class="footer-sidebar-first">
-					<!-- patreon -->
-					<a href="<?php the_field('patreon_url', 93); ?>" class="footer-large-margin">
-						<img class="sidebar-square" src="<?php the_field('patreon_unbroken', 93)?>" />
-						<?php if(get_field('patreon_broken', 93)) : ?>
-							<img class="sidebar-square broken" src="<?php the_field('patreon_broken', 93)?>" />
-						<?php endif ?>
-					</a>
+		<div id="footer-sidebar">
+			<div class="white-bg">
+				<div class="footer-sidebar-wrap">
+					<!-- divider -->
+					<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
+					
+					<div class="footer-sidebar-first">
+						<!-- patreon -->
+						<a href="<?php the_field('patreon_url', 93); ?>" class="footer-large-margin">
+							<img class="sidebar-square" src="<?php the_field('patreon_unbroken', 93)?>" />
+							<?php if(get_field('patreon_broken', 93)) : ?>
+								<img class="sidebar-square broken" src="<?php the_field('patreon_broken', 93)?>" />
+							<?php endif ?>
+						</a>
 
-					<!-- support -->
-					<a href="<?php the_field('support_url', 93);?>">
-						<img class="sidebar-rectangle" src="<?php the_field('support_unbroken', 93);?>"/>
-						<?php if(get_field('support_broken', 93)) : ?>
-							<img class="sidebar-rectangle broken" src="<?php the_field('support_broken', 93);?>"/>
-						<?php endif ?>
-					</a>
+						<!-- support -->
+						<a href="<?php the_field('support_url', 93);?>">
+							<img class="sidebar-rectangle" src="<?php the_field('support_unbroken', 93);?>"/>
+							<?php if(get_field('support_broken', 93)) : ?>
+								<img class="sidebar-rectangle broken" src="<?php the_field('support_broken', 93);?>"/>
+							<?php endif ?>
+						</a>
+					</div>
+
+					<!-- divider -->
+					<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
+					<div class="footer-sidebar-second">
+
+						<!-- connect -->
+						<a href="<?php the_field('connect_url', 93);?>" class="footer-large-margin">
+							<img class="sidebar-rectangle" src="<?php the_field('connect_unbroken', 93);?>" />
+							<?php if (get_field('connect_broken', 93)) : ?>
+								<img class="sidebar-rectangle broken" src="<?php the_field('connect_broken', 93);?>" />
+							<?php endif ?>
+						</a>
+						
+						<!-- rss -->
+						<a href="<?php the_field('rss_url', 93);?>">
+							<img class="sidebar-square" src="<?php the_field('rss_unbroken', 93);?>" />
+							<?php if (get_field('rss_broken', 93)) : ?>
+								<img class="sidebar-square broken" src="<?php the_field('rss_broken', 93);?>" />
+							<?php endif ?>
+						</a>
+					</div>
+
+					<!-- divider -->
+					<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
+						<div class="sidebar-divider-third">
+						
+						<!-- tumblr -->
+						<a href="<?php the_field('tumblr_url', 93);?>" class="footer-small-margin">
+							<img class="sidebar-square" src="<?php the_field('tumblr_unbroken', 93);?>" />
+							<?php if(get_field('tumblr_broken', 93)) : ?>
+								<img class="sidebar-square broken" src="<?php the_field('tumblr_broken', 93);?>" />
+							<?php endif; ?>
+						</a>
+						
+						<!-- twitter -->
+						<a href="<?php the_field('twitter_url', 93);?>" class="footer-small-margin">
+							<img class="sidebar-square" src="<?php the_field('twitter_unbroken', 93);?>" />
+							<?php if(get_field('twitter_broken', 93)) : ?>
+								<img class="sidebar-square broken" src="<?php the_field('twitter_broken', 93);?>" />
+							<?php endif; ?>
+						</a>
+						
+						<!-- instagram -->
+						<a href="<?php the_field('instagram_url', 93);?>">
+							<img class="sidebar-square" src="<?php the_field('instagram_unbroken', 93);?>" />
+							<?php if(get_field('instagram_broken', 93)) : ?>
+								<img class="sidebar-square broken" src="<?php the_field('instagram_broken', 93);?>" />
+							<?php endif; ?>
+						</a>
+					
+					</div>
+					<!-- divider -->
+					<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
 				</div>
-
-				<!-- divider -->
-				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
-				<div class="footer-sidebar-second">
-
-					<!-- connect -->
-					<a href="<?php the_field('connect_url', 93);?>" class="footer-large-margin">
-						<img class="sidebar-rectangle" src="<?php the_field('connect_unbroken', 93);?>" />
-						<?php if (get_field('connect_broken', 93)) : ?>
-							<img class="sidebar-rectangle broken" src="<?php the_field('connect_broken', 93);?>" />
-						<?php endif ?>
-					</a>
-					
-					<!-- rss -->
-					<a href="<?php the_field('rss_url', 93);?>">
-						<img class="sidebar-square" src="<?php the_field('rss_unbroken', 93);?>" />
-						<?php if (get_field('rss_broken', 93)) : ?>
-							<img class="sidebar-square broken" src="<?php the_field('rss_broken', 93);?>" />
-						<?php endif ?>
-					</a>
-				</div>
-
-				<!-- divider -->
-				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
-					<div class="sidebar-divider-third">
-					
-					<!-- tumblr -->
-					<a href="<?php the_field('tumblr_url', 93);?>" class="footer-small-margin">
-						<img class="sidebar-square" src="<?php the_field('tumblr_unbroken', 93);?>" />
-						<?php if(get_field('tumblr_broken', 93)) : ?>
-							<img class="sidebar-square broken" src="<?php the_field('tumblr_broken', 93);?>" />
-						<?php endif; ?>
-					</a>
-					
-					<!-- twitter -->
-					<a href="<?php the_field('twitter_url', 93);?>" class="footer-small-margin">
-						<img class="sidebar-square" src="<?php the_field('twitter_unbroken', 93);?>" />
-						<?php if(get_field('twitter_broken', 93)) : ?>
-							<img class="sidebar-square broken" src="<?php the_field('twitter_broken', 93);?>" />
-						<?php endif; ?>
-					</a>
-					
-					<!-- instagram -->
-					<a href="<?php the_field('instagram_url', 93);?>">
-						<img class="sidebar-square" src="<?php the_field('instagram_unbroken', 93);?>" />
-						<?php if(get_field('instagram_broken', 93)) : ?>
-							<img class="sidebar-square broken" src="<?php the_field('instagram_broken', 93);?>" />
-						<?php endif; ?>
-					</a>
-				
-				</div>
-				<!-- divider -->
-				<img class="sidebar-divider" src="<?php the_field('divider_image', 93);?>" />
 			</div>
+
+
+
+			<!-- ****** FOOTER DESCRIPTION ****** -->
+			<p id="footer-desc"><?php the_field('footer_text', 93)?></p>
 		</div>
 
 
@@ -163,6 +173,7 @@ $tumblr = get_theme_mod( 'jetpack-tumblr' );
 				<?php endwhile; ?>
 			<?php endif; ?> 
 		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

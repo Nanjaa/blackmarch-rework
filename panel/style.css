@@ -1845,7 +1845,10 @@ footer {
 
 #footer-sidebar {
     float: right;
-    padding: 10px;
+}
+#footer-sidebar .white-bg {
+	padding: 10px;
+
 }
 @media screen and (min-width: 768px) {
 	#footer-sidebar {
@@ -1865,6 +1868,16 @@ footer {
 #footer-sidebar a {
 	line-height: 0;
 	display: inline-block;
+}
+#footer-desc {
+	color: white;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+@media screen and (max-width: 768px) {
+	#footer-desc {
+		text-align: center;
+	}
 }
 
 
